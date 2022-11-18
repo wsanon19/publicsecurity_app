@@ -6,7 +6,7 @@ pipeline {
 	stages {
 		stage ("build gradle") {   
 			steps {
-				sh './gradlew clean build -x test'
+				sh 'chmod 755 ./gradlew clean build -x test'
 			}
 		}
 		stage ('Build docker image') {
